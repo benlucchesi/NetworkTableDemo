@@ -5,6 +5,7 @@ import java.util.EnumSet;
 import edu.wpi.first.networktables.NetworkTable;
 import edu.wpi.first.networktables.NetworkTableEvent;
 import edu.wpi.first.networktables.NetworkTableInstance;
+import edu.wpi.first.networktables.PubSubOption;
 import edu.wpi.first.networktables.StringSubscriber;
 import edu.wpi.first.wpilibj.TimedRobot;
 
@@ -18,7 +19,7 @@ public class Robot extends TimedRobot {
     defaultNetworkTable = NetworkTableInstance.getDefault();
     NetworkTable datatable = defaultNetworkTable.getTable("datatable");
 
-    stringSubscriber = datatable.getStringTopic("myStringValue").subscribe("not set", PubSubOptions.keepDuplicates(true), PubSubOptions.sendAll(true));
+    stringSubscriber = datatable.getStringTopic("myStringValue").subscribe("not set", PubSubOption.keepDuplicates(true), PubSubOption.sendAll(true));
 
     // Set up a listener for changes to the value
     defaultNetworkTable.addListener(stringSubscriber, 
