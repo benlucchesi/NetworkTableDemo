@@ -18,8 +18,9 @@ public class Robot extends TimedRobot {
     defaultNetworkTable = NetworkTableInstance.getDefault();
     NetworkTable datatable = defaultNetworkTable.getTable("datatable");
 
-    stringSubscriber = datatable.getStringTopic("/datatable/myStringValue").subscribe("not set");
+    stringSubscriber = datatable.getStringTopic("myStringValue").subscribe("not set", PubSubOptions.keepDuplicates(true), PubSubOptions.sendAll(true));
 
+    // Set up a listener for changes to the value
     defaultNetworkTable.addListener(stringSubscriber, 
       EnumSet.of(NetworkTableEvent.Kind.kValueAll),
       event -> {
@@ -33,15 +34,10 @@ public class Robot extends TimedRobot {
   @Override
   public void robotPeriodic() {
 
-    if( lastStringValue != stringSubscriber.get() ) {
-      lastStringValue = stringSubscriber.get();
-      System.out.println("Polled - Client said: " + lastStringValue);
-    }
+    // if( lastStringValue != stringSubscriber.get() ) {
+    //   lastStringValue = stringSubscriber.get();
+    //   System.out.println("Polled - Client said: " + lastStringValue + " " + System.currentTimeMillis());
+    // }
 
   }
-
-  // /** This function is called periodically during operator control. */
-  // @Override
-  // public void teleopPeriodic() {}
-
 }

@@ -1,6 +1,0 @@
-wpimath-cpp-2025.1.1-osxuniversal.zip -> wpimath-cpp-2025.1.1-osxuniversal (edu.wpi.first.wpimath:wpimath-cpp:2025.1.1)
-wpinet-cpp-2025.1.1-osxuniversal.zip -> wpinet-cpp-2025.1.1-osxuniversal (edu.wpi.first.wpinet:wpinet-cpp:2025.1.1)
-wpiutil-cpp-2025.1.1-osxuniversal.zip -> wpiutil-cpp-2025.1.1-osxuniversal (edu.wpi.first.wpiutil:wpiutil-cpp:2025.1.1)
-ntcore-cpp-2025.1.1-osxuniversal.zip -> ntcore-cpp-2025.1.1-osxuniversal (edu.wpi.first.ntcore:ntcore-cpp:2025.1.1)
-cscore-cpp-2025.1.1-osxuniversal.zip -> cscore-cpp-2025.1.1-osxuniversal (edu.wpi.first.cscore:cscore-cpp:2025.1.1)
-opencv-cpp-4.10.0-3-osxuniversal.zip -> opencv-cpp-4.10.0-3-osxuniversal (edu.wpi.first.thirdparty.frc2025.opencv:opencv-cpp:4.10.0-3)
